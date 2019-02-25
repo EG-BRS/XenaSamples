@@ -1,0 +1,11 @@
+{
+  "development": {
+    "authority": "https://localhost:44343",
+    "client_id": "mvc"
+  },
+
+  "production": {
+    "authority": "https://login.xena.biz",
+    "client_id": "YourClientIdHere"
+  }
+}
