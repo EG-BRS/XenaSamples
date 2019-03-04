@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XenaSamples.ImplicitFlow.MvcClient", "XenaSamples.ImplicitFlow.MvcClient\XenaSamples.ImplicitFlow.MvcClient.csproj", "{2D040A32-DEBF-4A7A-8004-46404FDFBBB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XenaSamples.HybridFlow.MvcClient", "XenaSamples.HybridFlow.MvcClient\XenaSamples.HybridFlow.MvcClient.csproj", "{43AB0388-20DC-4129-A24A-F908F6BEBFCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D040A32-DEBF-4A7A-8004-46404FDFBBB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D040A32-DEBF-4A7A-8004-46404FDFBBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D040A32-DEBF-4A7A-8004-46404FDFBBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D040A32-DEBF-4A7A-8004-46404FDFBBB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43AB0388-20DC-4129-A24A-F908F6BEBFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43AB0388-20DC-4129-A24A-F908F6BEBFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43AB0388-20DC-4129-A24A-F908F6BEBFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43AB0388-20DC-4129-A24A-F908F6BEBFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A4CC91-C24F-4879-8CD4-3A876DBA784C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A4CC91-C24F-4879-8CD4-3A876DBA784C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A4CC91-C24F-4879-8CD4-3A876DBA784C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A4CC91-C24F-4879-8CD4-3A876DBA784C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6051678-3C54-4B19-93BE-5DF8D4C30487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6051678-3C54-4B19-93BE-5DF8D4C30487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6051678-3C54-4B19-93BE-5DF8D4C30487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6051678-3C54-4B19-93BE-5DF8D4C30487}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47D7B30A-B406-4A72-B7E6-3F5E123D8B70}
+	EndGlobalSection
+EndGlobal
