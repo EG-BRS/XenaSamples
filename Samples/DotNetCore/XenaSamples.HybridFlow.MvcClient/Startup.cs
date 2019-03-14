@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using XenaSamples.HybridFlow.MvcClient.Xena;
 
 namespace XenaSamples.HybridFlow.MvcClient
 {
@@ -33,8 +34,9 @@ namespace XenaSamples.HybridFlow.MvcClient
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddXenaAPI(new XenaApiOptions() { XenaEndpoint = "https://test.xena.biz/api"});
 
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
@@ -43,14 +45,14 @@ namespace XenaSamples.HybridFlow.MvcClient
                     options.DefaultScheme = "Cookies";
                     options.DefaultChallengeScheme = "oidc";
                 })
-                .AddCookie("Cookies")
+                .AddCookie("Cookies", options =>
+                {
+                    options.Cookie.SameSite = SameSiteMode.None;  
+                })
                 .AddOpenIdConnect("oidc", options =>
                 {
                     options.SignInScheme = "Cookies";
-
                     options.Authority = Configuration["Xena:Authority"];
-                    options.RequireHttpsMetadata = false;
-
                     options.ClientId = Configuration["Xena:ClientId"];
                     options.ClientSecret = Configuration["Xena:ClientSecret"];
                     options.ResponseType = "code id_token";
@@ -59,9 +61,6 @@ namespace XenaSamples.HybridFlow.MvcClient
                     options.GetClaimsFromUserInfoEndpoint = true;
 
                     options.Scope.Add("testapi");
-                    options.Scope.Add("offline_access");
-
-                    options.ClaimActions.MapJsonKey("website", "website");
                 });
 
 
@@ -83,7 +82,6 @@ namespace XenaSamples.HybridFlow.MvcClient
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
