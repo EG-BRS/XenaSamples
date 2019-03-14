@@ -19,11 +19,5 @@ namespace XenaSamples.HybridFlow.MvcClient.Xena
            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
            return await client.GetStringAsync($"{_xenaEndpoint}{apiEndPoint}");
         }
-
-        public static XenaHttpClient Init(XenaApiOptions options)
-        {
-            var response = new XenaHttpClient(options.XenaEndpoint);
-            return response;
-        }
     }
 }

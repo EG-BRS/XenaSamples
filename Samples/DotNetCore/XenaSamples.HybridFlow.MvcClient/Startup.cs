@@ -36,7 +36,7 @@ namespace XenaSamples.HybridFlow.MvcClient
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddXenaAPI(new XenaApiOptions() { XenaEndpoint = "https://my.xena.biz/api"});
+            services.AddXenaAPI("https://my.xena.biz/api");
 
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
