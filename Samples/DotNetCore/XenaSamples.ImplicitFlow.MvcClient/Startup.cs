@@ -52,6 +52,7 @@ namespace XenaSamples.ImplicitFlow.MvcClient
                     options.ClientId = Configuration["Xena:ClientId"]; ;
                     options.SaveTokens = true;
                     options.Scope.Add("testapi");
+                    
                 });
 
 
